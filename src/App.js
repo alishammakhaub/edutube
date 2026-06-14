@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from "react";
 import Header from "./components/Header";
-//import OnboardingFlow from "./components/OnboardingFlow";
+import OnboardingFlow from "./components/OnboardingFlow";
 import Dashboard from "./components/Dashboard";
-//import VideoGrid from "./components/VideoGrid";
+import VideoGrid from "./components/VideoGrid";
 import AIAssistant from "./components/AIAssistant";
 import WatchHistory from "./components/WatchHistory";
 import "./styles/App.css";
