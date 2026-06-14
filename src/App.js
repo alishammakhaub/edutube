@@ -61,13 +61,13 @@ function App() {
     return profile.bookmarks.some(v => v.id === id);
   }, [profile.bookmarks]);
 
-  /*if (!onboardingDone) {
+  if (!onboardingDone) {
     return (
       <div className="app-root">
         <OnboardingFlow onComplete={handleOnboardingComplete} />
       </div>
     );
-  }*/
+  }
 
   return (
     <div className="app-root">
