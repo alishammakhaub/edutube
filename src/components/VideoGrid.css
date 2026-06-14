@@ -1,0 +1,8 @@
+/* ===== VIDEO GRID ===== */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 22px;
+  transition: opacity var(--transition-med);
+}
+.video-grid.loading { opacity: 0.5; pointer-events: none; }

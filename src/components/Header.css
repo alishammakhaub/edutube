@@ -1,0 +1,168 @@
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 66px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 0 28px;
+  gap: 24px;
+  background: rgba(7, 7, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+.header-logo-icon {
+  width: 32px; height: 32px;
+  background: var(--gradient-accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: white;
+  box-shadow: 0 0 16px rgba(99,179,237,0.25);
+}
+.header-logo-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Nav */
+.header-nav {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+.header-tab {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 18px;
+  border-radius: 50px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  letter-spacing: 0.01em;
+}
+.header-tab:hover { color: var(--text-secondary); background: var(--bg-glass); }
+.header-tab.active {
+  background: rgba(99,179,237,0.1);
+  color: var(--accent-blue);
+}
+.tab-icon { font-size: 12px; }
+.tab-label { font-family: var(--font-display); font-weight: 600; }
+
+/* Right */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header-ai-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, rgba(99,179,237,0.12), rgba(159,122,234,0.12));
+  border: 1px solid rgba(99,179,237,0.2);
+  color: var(--accent-blue);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  transition: all var(--transition-fast);
+}
+.header-ai-btn:hover {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 20px rgba(99,179,237,0.2);
+  color: var(--text-primary);
+}
+.ai-btn-icon { font-size: 11px; animation: float 3s ease-in-out infinite; }
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 50px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-glass);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  user-select: none;
+}
+.header-profile:hover { border-color: var(--border-active); }
+.profile-emoji { font-size: 16px; }
+.profile-label {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  color: var(--text-secondary);
+}
+.profile-caret { font-size: 10px; color: var(--text-muted); }
+
+/* Dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 220px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 8px;
+  animation: fadeInUp 0.2s ease;
+  z-index: 200;
+}
+.dropdown-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 6px 10px 8px;
+}
+.dropdown-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+.dropdown-item:hover { background: var(--bg-glass); color: var(--text-primary); }
+.dropdown-item.active { background: rgba(99,179,237,0.08); color: var(--accent-blue); }
+.dropdown-sub { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+.dropdown-divider { height: 1px; background: var(--border-subtle); margin: 6px 0; }
+
+@media (max-width: 600px) {
+  .header { padding: 0 16px; gap: 12px; }
+  .tab-label { display: none; }
+  .header-ai-btn span:last-child { display: none; }
+  .profile-label { display: none; }
+}

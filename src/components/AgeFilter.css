@@ -1,0 +1,44 @@
+/* ===== AGE FILTER ===== */
+.age-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.filter-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.age-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.age-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-glass);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  transition: all var(--transition-fast);
+}
+.age-pill:hover {
+  border-color: var(--pill-color);
+  color: var(--pill-color);
+}
+.age-pill.active {
+  border-color: var(--pill-color);
+  background: rgba(var(--pill-color), 0.08);
+  color: var(--pill-color);
+  box-shadow: 0 0 12px rgba(var(--pill-color), 0.15);
+}
